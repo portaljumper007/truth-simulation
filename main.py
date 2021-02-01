@@ -17,7 +17,7 @@ for j in range(10000):
     x = []
     y = []
     population = []
-    for i in range(1, 1000, 5):
+    for i in range(1, 100, 1):
         population.append(person())
         opinions = []
         certainties = []
@@ -28,7 +28,7 @@ for j in range(10000):
         x.append(i)
         y.append(np.average(opinions, weights=certainties))
     ly.append(y)
-    rang = np.linspace(0,100,9)
+    rang = np.linspace(0,100,20)
 
     for o in rang:
         plt.plot(x, np.percentile(ly, o, axis=0))
